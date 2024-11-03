@@ -1,17 +1,24 @@
 'use client'
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import Body from './Body'
 const Roomba = () => {
-  let snow=()=>{
-    console.log('bip')
+  let [pipa,setpipa]=useState()
+  let snow=(kil)=>{
+    setpipa(kil)
   }
+  let hold=useRef()
+
+
+
+  
   return (
     <div>
-      
+      <Body/>
     <h3>Fillera+</h3>
 
-      <input type='text'></input>
-      <button onClick={snow}>OK</button>
-    
+      <input type='text' ref={hold}></input>
+      <button onClick={()=>snow(hold.current.value)}>OK</button>
+    {pipa}
       
       
       </div>

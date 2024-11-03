@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+// import {Montserrat}  from 'next/font/google';
+
+// let inter=Montserrat({subsets:['latin'],weight:"400"})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
