@@ -1,8 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-// import {Montserrat}  from 'next/font/google';
-
-// let inter=Montserrat({subsets:['latin'],weight:"400"})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body >
+<div style={{height:'80',weight:'auto',backgroundColor:'red'}}>Руперт</div>
+
         {children}
       </body>
     </html>
