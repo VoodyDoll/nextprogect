@@ -8,6 +8,9 @@ export default function Home() {
 
   return (
     <>
+    
+    <center style={{marginTop:'25px'}}><Image width={250} height={250} src="/img/Hvong.jpg"/></center>
+   
       <center><ul style={{marginTop:'35px',color:'red',fontSize:'2rem'}}>
         <li><Link href={'abaut'}>Abaut</Link></li>
         <li><Link href={'/main/god'}>God</Link></li>
