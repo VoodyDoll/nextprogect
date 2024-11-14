@@ -20,7 +20,7 @@ const index = ({ revande }) => {
                     <center>
                         <Link href={`/statics/${item.id}`}>
                             <div>
-                                <Image src={`/img/${item.img}`} width={150} height={100} alt='not foto'  objectFit='cover' ></Image>
+                                <Image src={`/img/${item.img}`} width={150} height={100} alt='not foto' objectFit='cover' ></Image>
                             </div>
                             <p key={item.id} style={{ color: 'red' }}>{item.title} : {item.prise} руб</p>
 
