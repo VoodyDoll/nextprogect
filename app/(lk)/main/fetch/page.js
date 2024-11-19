@@ -2,6 +2,8 @@
 // cashe:'forse-cashe'
 // cashe:'non-store'
 
+import Link from "next/link"
+
 
 export default async function didal() {
     let response = await fetch(`http://localhost:5000/1`, { next: { revalidate: 10 } })
@@ -9,7 +11,21 @@ export default async function didal() {
 
     console.log(data)
 
-    return <div>{data.id}</div>
+    return (
+        <div>
+
+            {data.map((item) => {
+                return (
+                    <center>
+                        <p><Link href={`fetch/${item.id}`}>{item.id}</Link></p>
+                        </center>
+                )
+            })}
+
+
+
+
+        </div>)
 }
 
 

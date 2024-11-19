@@ -13,6 +13,7 @@ const Alllayout = ({ children }) => {
         <li><Link href="/products/WoshMashin">WoshMashin</Link></li>
       </ul>
       </center>
+      <hr/>
 
 
       {children}

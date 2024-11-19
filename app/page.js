@@ -15,9 +15,9 @@ export default function Home() {
         <li><Link href={'abaut'}>Abaut</Link></li>
         <li><Link href={'/main/god'}>God</Link></li>
         <li><Link href={'/main/swing'}>Swing</Link></li>
-        <li><Link href={'/Featch'}>Fetch</Link></li>
+        <li><Link href={'/main/fetch'}>Fetch</Link></li>
         <li><Link href={'/statics'}>Statics</Link></li>
-
+        <li><Link href={'/sushy'}>Sushy</Link></li>
       </ul><GiSushis style={{fontSize:'4rem',marginTop:'25px'}}/></center>
       <Forma/>
     </>

@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import Image from 'next/image'
 
@@ -18,22 +17,16 @@ export let getStaticPath = async () => {
   }
 }
 
-// let pipa=async ()=>{
-//   let res=await fetch(`http://localhost:5000/1`)
-//   return res.json()
-// }
+export let getServerSideProps = async (context) => {
+  let id = context.params.id
 
-
-// export let getStaticProps = async (context) => {
-//   let {id} = context.params
-
-//   let resp = await fetch(`http://localhost:5000/sushy/${id}`)
-//   let data = await resp.json()
-//   console.log(data)
-//   return {
-//     props: { products: data }
-//   }
-// }
+  let resp = await fetch(`http://localhost:5000/sushy/${id}`)
+  let data = await resp.json()
+  console.log(data)
+  return {
+    props: { products: data }
+  }
+}
 
 const Details = ({ products }) => {
 
