@@ -1,48 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 
-// const Post = ({ post }) => (
-//   <div>
-//     <h1>{post}</h1>
-//   </div>
-// )
-
-// export default Post
-
 export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { id: '1' } },
-      { params: { id: '2' } }
-    ],
-    fallback: false,
-  };
-}
-
-// export function getStaticProps({params}){
-//   let id = params.id
-//   return {
-//         props: { post: id}
-//       }
-// }
-
-// export let getStaticPath = async () => {
-//   let resp = await fetch(`http://localhost:5000/2`)
-//   let data = await resp.json()
-
-//   let paths = data.map((item) => {
-//     return {
-//       params: { id: item.id},
-//     }
-//   })
-//   return {
-//     paths,
-//     fallback: false
-//   }
-// // }
-// export async function getStaticProps(params) {
   
-
+  const res = await fetch(`http://localhost:5000/2`)
+  const posts = await res.json() 
+  
+  const paths = posts.map((post) => ({
+    params: { id: post.id.toString() },
+  }))
+  
+  return { paths, fallback: false }
+}
+  
+// хорошо
 export let getStaticProps = async ({params}) => {
   let id = params.id
 
@@ -71,7 +42,6 @@ const Details = ( {products} ) => {
           </center>
         )
       })}
-
 
     </div>
   )
